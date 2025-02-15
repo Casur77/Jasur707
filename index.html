@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>План Тренировок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>План Тренировок</h1>
+</header>
+
+<div class="controls">
+    <label for="trainingMode">Режим тренировки:</label>
+    <select id="trainingMode">
+        <option value="4weeks">4-недельный</option>
+        <option value="daily">Ежедневный</option>
+    </select>
+
+    <label for="trainingFrequency">Частота тренировок в неделю:</label>
+    <select id="trainingFrequency">
+        <option value="1">1 тренировка</option>
+        <option value="2">2 тренировки</option>
+        <option value="3">3 тренировки</option>
+    </select>
+
+    <label for="exercisesPerDay">Кол-во упражнений (ежедневный режим):</label>
+    <select id="exercisesPerDay">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <button id="updateBtn">Обновить таблицу</button>
+    <button id="saveBtn">Сохранить тренировку</button>
+    <button id="loadBtn">Загрузить тренировку</button>
+    <button id="duplicateBtn">Дублировать тренировку</button>
+    <button id="downloadCsvBtn">Скачать CSV</button>
+    <button id="downloadPdfBtn">Скачать PDF</button>
+</div>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Неделя/День</th>
+                <th>Подходы × Повторения</th>
+                <th>Вес (кг)</th>
+                <th>Суммарные повторения</th>
+            </tr>
+        </thead>
+        <tbody id="trainingTable"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
